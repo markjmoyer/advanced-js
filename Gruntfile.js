@@ -82,7 +82,7 @@ module.exports = function(grunt) {
       files: {
         expand: true,
         cwd: "<%= dirs.src %>/assets/scss",
-        src: "default.scss",
+        src: "advanced-js.scss",
         dest: "<%= dirs.src %>/assets/css",
         ext: ".css"
       }
