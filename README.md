@@ -1,8 +1,7 @@
-# NASCAR HTML Cut-Ups
+# An HTML Generator w/SASS
 
 
 ## Project Dependencies
-
 Following are the dependencies and packages used in developing this website:
 
 * [Git](http://git-scm.com/) - Source Code Management
@@ -11,94 +10,7 @@ Following are the dependencies and packages used in developing this website:
 * [Bower](http://bower.io/) - Package Manager for the Web
 * [jQuery](http://jquery.com/) - The Write Less, Do More JavaScript Library
 * [Modernizr](http://modernizr.com/) - Detects HTML5 and CSS3 features in the user’s browser
-* [LESS](http://lesscss.org/) - CSS Pre-Processor
-
-&nbsp;
-
-## Setting Up A Development Environment
-
-Not much is needed to get started building inside this project other than a text
-editor and a web server, but there are a few prerequisites that you'll have to
-install to use the build tools.
-
-### Installing Git
-Visit the [Git](http://git-scm.com/downloads) downloads page and select the installer
-for your particular environment. Run the installer and you're all set to start using
-the Git version control system. If you're new to Git, there is a
-[Git How-To](http://confluence.nascar.com/display/NAS/How-to%3A+Using+Git+SCM)
-in the Nascar Digital Media wiki that can help you get started.
-
-Once you have installed Git, you will need to checkout the source code into your
-local web root. For more information on finding your web root, please see the section
-titled [Viewing Your Local Website](#lws) below. Once you have identified your
-web root, open a command-line terminal and enter the following command:
-
-    $> cd <YOUR_WEB_ROOT>
-    $> git clone http://<YOUR_USER_NAME>@stash.nascar.com/scm/nas/nascar-html-cutups.git
-
-### Installing NodeJS and NPM
-Visit the [NodeJS](http://nodejs.org/) website and download the installer for your
-particular environment. Run the installer, then verify that Node is installed by
-running the command `node -v` from the command-line terminal. NPM, the Node Package
-Manager, is installed by default with NodeJS. Once installed, you can install Node
-Packages using the `npm install` command.
-
-### Installing Grunt
-To install Grunt, open a command-line terminal and run the command
-`npm install -g grunt-cli`. For a more complete guide to setting up Grunt, visit
-the [Getting Started](http://gruntjs.com/getting-started) guide. Grunt is used to perform
-all of the tasks that help make modern websites work: Minification, Concatenation,
-Pre-Processing, Linting, Test Running, etc.
-
-    $> npm install -g grunt-cli
-
-### Installing Bower
-To install Bower, open a command-line terminal and run the command
-`npm install -g bower`. Bower is used to manage packages and dependencies for building
-websites. Bower-enabled packages exist for things like Bootstrap, jQuery, AngularJS,
-Backbone.js, Require.js, etc. Bower makes it easy to keep these resources up-to-date
-and separated from your custom code.
-
-    $> npm install -g bower
-
-### <a name="fin"></a>Finishing Your install
-Once you have installed Node, Grunt and Bower, you're ready to initialize your project
-by running "npm install" from the command line inside your target directory.
-
-    $> npm install
-
-### <a name="lws"></a>Viewing Your Local Website
-Assuming you have setup a local webserver, and assuming that you have cloned the
-source code for this project into your web root, you should be able to access the
-website at:
-
-* [http://localhost/nascar-html-cutups/default/dist/index.html](http://localhost/nascar-html-cutups/default/dist/index.html)
-
-#### Common Web Roots
-Following are the common locations where you will find your Web Root on your computer.
-If you do not have a web server installed, please install a server that is appropriate
-for your environment:
-
-* __Windows__ (IIS built-in)
- * c:/inetpub/wwwroot/
-* __Mac OSX__ (Apache built-in)
- * /Library/WebServer/Documents/
-* __Unix / Linux__ (Apache built-in):
- * /var/www/html/
- * /home/www/
- * /usr/local/www/
-
-
-#### Finding Your Web Root in Unix/Linux
-Open a command-line terminal and enter one of the following commands based on the
-distribution that you are using:
-
-    # Find your web root
-    $> grep -i 'DocumentRoot' /etc/httpd/conf/httpd.conf # RHEL/RedHat/Fedora/CentOS
-    $> grep -i 'DocumentRoot' /usr/local/etc/apache22/httpd.conf # FreeBSD
-    $> grep -i 'DocumentRoot' httpd.conf # Other distributions
-
-&nbsp;
+* [SASS] - CSS Pre-Processor
 
 ## Using Grunt Task Runner
 
@@ -161,7 +73,7 @@ website are stored here in context-specific directories. Files are written here 
 the Grunt tasks described above. When authoring CSS or JavaScript, you should never
 write files directly into this directory.
 
-#### LESS / CSS
+#### SASS / CSS
 When authoring CSS for this project, you should be authoring using LESS - writing
 \*.less files into the __/src/assets/less/__ directory. These files are then parsed
 into CSS by the Grunt tasks described above.
@@ -230,22 +142,3 @@ above, we could write the following content into the __meta.html__ file:
     <meta name="keywords" content="@@keywords">
 
 Simply by defining the values in our __package.json__ file:
-
-    "title": "NASCAR HTML Cutups",
-    "description": "This is an HTML Generator for the NASCAR HTML Cutups",
-    "keywords": "NASCAR,nascar.com,HTML,templates",
-
-&nbsp;
-
-
-## Deploying Code
-
-Once Grunt has completed, you should test and ultimately deploy your code from the
-__/dist/__ directory, as this is the "distribution" version of the website. There
-is a [Bamboo Job](http://bamboo.nascar.com/browse/NH-HC/) setup to deploy code automatically
-when commits are made to the master branch of the Git repository. Issuing a Pull Request and
-merging that code will result in the final "dist" directory being deployed to the target server.
-
-You can see your code online after deployment completes at:
-
-* [http://dev-cutups.nascar.com/your-project-name/](http://dev-cutups.nascar.com/your-project-name/)
