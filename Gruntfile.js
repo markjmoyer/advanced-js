@@ -221,7 +221,7 @@ module.exports = function(grunt) {
       },
     },
 
-    // Wire up include capabilities
+    // Wire up the include capabilities
     simple_include: {
       options: {
         'includeRegex':"<!--.*?include:.*?([a-zA-Z0-9_@/.-]+).*?\'?(.*?)-->"

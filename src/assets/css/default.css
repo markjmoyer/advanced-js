@@ -405,16 +405,16 @@ p {
 body {
   margin: 0;
   background-color: #ffd659; }
-  body .mySite {
+  body .advanced-js {
     margin: 20px 0;
     font-family: "Arial", "Helvetica", sans-serif;
     font-size: 100%;
     color: #000000; }
-    body .mySite section {
+    body .advanced-js section {
       margin: 0; }
-    body .mySite a {
+    body .advanced-js a {
       color: #0079c2; }
-    body .mySite a.more {
+    body .advanced-js a.more {
       display: block;
       float: right;
       margin: 20px 37px 0 0;
@@ -423,31 +423,31 @@ body {
       font-size: 12px;
       font-weight: bold;
       color: #0079c2; }
-      body .mySite a.more:hover {
+      body .advanced-js a.more:hover {
         text-decoration: underline; }
-      body .mySite a.more:after {
+      body .advanced-js a.more:after {
         display: block;
         float: right;
         content: " \25B6";
         transform: scale(0.5, 0.9);
         margin: -1px 0 0 7px; }
 
-.tablet .mySite a.more {
+.tablet .advanced-js a.more {
   margin: 14px 37px 0 0; }
 
-.mobile .mySite a.more {
+.mobile .advanced-js a.more {
   margin: 12px 10px 0 0; }
 
-.mySite header h1,
-.mySite header h2,
-.mySite header p {
+.advanced-js header h1,
+.advanced-js header h2,
+.advanced-js header p {
   text-align: center; }
-.mySite h1 {
+.advanced-js h1 {
   text-align: center; }
 
-.mySite header h1,
-.mySite header h2,
-.mySite header p {
+.advanced-js header h1,
+.advanced-js header h2,
+.advanced-js header p {
   text-align: center; }
 
 /*# sourceMappingURL=default.css.map */
